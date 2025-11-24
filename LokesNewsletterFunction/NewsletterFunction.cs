@@ -20,7 +20,8 @@ namespace LokesNewsletterFunction.Functions
 
         [Function("SendNewsletter")]
         //public async Task RunAsync([TimerTrigger("0 */1 * * * *")] TimerInfo timerInfo)
-        public async Task RunAsync([TimerTrigger("0 0 0 * * 1")] TimerInfo timerInfo)
+        //public async Task RunAsync([TimerTrigger("0 0 0 * * 1")] TimerInfo timerInfo)
+        public async Task RunAsync([TimerTrigger("0 0 7 * * MON")] TimerInfo timerInfo)
         {
             _logger.LogInformation($"Newsletter function triggered at: {System.DateTime.UtcNow}");
 
